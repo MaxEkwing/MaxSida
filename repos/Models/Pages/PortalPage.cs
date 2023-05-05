@@ -14,6 +14,7 @@ namespace repos.Models.Pages
     [ImageUrl("~/styles/images/page_type.png")]
     public class PortalPage : SitePageData
     {
-
+        [CultureSpecific]
+        public virtual LinkItemCollection Menu { get; set; }
     }
 }

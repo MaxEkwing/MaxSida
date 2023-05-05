@@ -10,6 +10,8 @@ public class PageViewModel<T> : IPageViewModel<T> where T : SitePageData
     }
 
     public T CurrentPage { get; private set; }
+
+    public PortalPage StartPage { get; set; }
 }
 
 public static class PageViewModel

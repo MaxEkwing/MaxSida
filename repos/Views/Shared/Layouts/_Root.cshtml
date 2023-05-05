@@ -12,8 +12,21 @@
     <link rel="stylesheet" href="\static\styles\style.css">
 
     </head>
-
-    <body class="bod">    
+    <body class="bod"> 
+        <header> 
+            @if(Model.StartPage != null && Model.StartPage.Menu != null){
+         <ul>
+        @foreach(var item in Model.StartPage.Menu)
+        {
+            <li>
+                <a href="@item.GetMappedHref()" class="menu">
+                    @item.Text
+                </a>
+            </li>
+        }
+        </ul>
+            }
+        </header>
         @await Html.RenderEPiServerQuickNavigatorAsync()
         @RenderBody()
     </body>

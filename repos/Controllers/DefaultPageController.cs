@@ -17,9 +17,16 @@ namespace repos.Controllers;
 [TemplateDescriptor(Inherited = true)]
 public class DefaultPageController : PageControllerBase<SitePageData>
 {
+    private readonly IContentRepository _contentRepository;
+    public DefaultPageController(IContentRepository iContentRepository)
+    {
+        _contentRepository = iContentRepository;
+
+    }
     public ViewResult Index(SitePageData currentPage)
     {
         var model = CreateModel(currentPage);
+        model.StartPage = _contentRepository.Get<PortalPage>(ContentReference.StartPage);
         return View($"~/Views/{currentPage.GetOriginalType().Name}/Index.cshtml", model);
     }
 
