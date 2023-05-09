@@ -8,19 +8,20 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=10" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     @*<title> @model.name</title>*@
-    <link rel="stylesheet" href="\static\styles\style.css">
+    <link rel="stylesheet" href="\css\style.css">
 
     </head>
-    <body class="bod"> 
+    <body class="bod">
         <header> 
             @if(Model.StartPage != null && Model.StartPage.Menu != null){
-         <ul>
+        <ul class="menu-container">
         @foreach(var item in Model.StartPage.Menu)
         {
             <li>
-                <a href="@item.GetMappedHref()" class="menu">
-                    @item.Text
+                <a class="menu" href="@item.GetMappedHref()">
+                    @item.Text&nbsp&nbsp&nbsp&nbsp;
                 </a>
             </li>
         }

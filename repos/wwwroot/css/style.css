@@ -1,54 +1,120 @@
-﻿@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
-img, video {
-  max-width: 100%;
+﻿/*@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+@import "inc/general";
+@import "inc/header";
+@import "inc/footer";
+@import "inc/content";
+@import "inc/blocks";*/
+.bod {
+  background-image: url(https://images.unsplash.com/photo-1529753253655-470be9a42781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGFyayUyMHN0b25lfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
-.teaserblock > div {
-  height: 100%;
+.related {
+  background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 460px) {
+  .related {
+    font-size: 32px;
+  }
 }
 
-header {
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-header .logo {
-  padding-right: 1rem;
-}
-header .logo img {
-  max-height: 100px;
+@media (max-width: 460px) {
+  .related-links {
+    font-size: 20px;
+  }
 }
 
-footer {
-  padding: 1.5rem;
-  margin-top: 1.5rem;
+.title {
+  font-size: 65px;
+  text-align: center;
+  background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 460px) {
+  .title {
+    font-size: 30px;
+  }
 }
 
-.content {
-  margin-bottom: 1.5rem;
+.epiText {
+  font-size: 40px;
+  text-align: center;
+  background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 460px) {
+  .epiText {
+    font-size: 20px;
+  }
 }
 
-.block {
-  margin-bottom: 1.5rem;
+.aboutText {
+  font-size: 22px;
+  background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+@media (max-width: 460px) {
+  .aboutText {
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
-.jumbotronblock {
-  color: #fff;
-  position: relative;
+a {
+  background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+  transition: background-image 0.7s ease-in-out;
 }
-.jumbotronblock > div {
-  background-size: cover;
-  background-position: 50% 50%;
-  position: relative;
+
+.menu-container {
+  display: flex;
+  justify-content: center;
 }
-.jumbotronblock .jumbotron-dimmer {
-  background: #000;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.4;
+
+.menu {
+  font-size: 25px;
 }
-.jumbotronblock .jumbotron-inner {
-  position: relative;
+@media (max-width: 460px) {
+  .menu {
+    font-size: 18px;
+  }
+}
+
+a:hover {
+  background-image: url(https://i.gifer.com/23WP.gif);
 }

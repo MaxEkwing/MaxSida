@@ -1,12 +1,26 @@
-﻿
-@model  PageViewModel<repos.Models.Pages.StandardPage>
+﻿@model  PageViewModel<repos.Models.Pages.StandardPage>
     <div class="container-fluid">
-        <div class="row myPage">
-            <div class="epiText">
+        <div class="standardPage">
+        
+            <div class="title">
                 <h2>@Html.PropertyFor(x => x.CurrentPage.Title)</h2>
+            </div>
+
+            <div class="epiText">
                 @Html.PropertyFor(x => x.CurrentPage.MainBody)
             </div>
+
+            <div class="aboutText">
+                @Html.PropertyFor(x => x.CurrentPage.SubBody)
+            </div>
+
+            <div class="container-related">
+                <h2 class="related"> Releated Content </h2>
+                <div class="related-links">
+                @Html.PropertyFor(m => m.CurrentPage.RelatedContentLinks)
+                </div>
+            </div>
+
         </div>
+
     </div>
-    <h2 class="related"> Releated Content </h2>
-    @Html.PropertyFor(m => m.CurrentPage.RelatedContentLinks)

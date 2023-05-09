@@ -24,6 +24,15 @@ public abstract class SitePageData : PageData
            GroupName = SystemTabNames.Content,
            Order = 2)]
     public virtual XhtmlString MainBody { get; set; }
+
+    [CultureSpecific]
+    [Display(
+           Name = "Sub body",
+           Description = "Sub body",
+           GroupName = SystemTabNames.Content,
+           Order = 3)]
+    public virtual XhtmlString SubBody { get; set; }
+
     [CultureSpecific]
     public virtual LinkItemCollection RelatedContentLinks { get; set; }
 

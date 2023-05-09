@@ -1,4 +1,4 @@
-﻿.bod {
+﻿/*.bod {
     background-image: url(https://i.pinimg.com/originals/b6/fe/0c/b6fe0c5fd3c211e729aabeca0597fa0e.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,7 +16,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.epiText {
+.title {
     font-size: 50px;
     text-align: center;
     background-image: url(https://i.gifer.com/S441.gif);
@@ -29,6 +29,29 @@
     -webkit-font-smoothing: antialiased;
 }
 
+.epiText {
+    font-size: 40px;
+    text-align: center;
+    background-image: url(https://i.gifer.com/S441.gif);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: 'Steelfish Rg', 'helvetica neue', helvetica, arial, sans-serif;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+}
+.aboutText {
+    font-size: 20px;
+    background-image: url(https://i.gifer.com/S441.gif);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: 'Steelfish Rg', 'helvetica neue', helvetica, arial, sans-serif;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+}
 a {
     background-image: url(https://i.gifer.com/S441.gif);
     background-repeat: repeat;
@@ -39,11 +62,16 @@ a {
     font-weight: 800;
     -webkit-font-smoothing: antialiased;
 }
+.menu-container {
+    display: flex;
+    justify-content: center;
+    background-image: url(https://static.wixstatic.com/media/5a73dd_e39c4aaa324f421381ef7000065a0d52~mv2.gif);
+}
 .menu {
     font-size: 25px;
-    transition: background-image .3s ease-in-out, background-image .3s ease-in-out;
+    transition: background-image .7s ease-in-out, background-image .7s ease-in-out;
 }
 
 a:hover {
     background-image: url(https://i.pinimg.com/originals/3b/da/a4/3bdaa45859f2a5047741a1cc29b14b3d.gif);
-}
+}*/
