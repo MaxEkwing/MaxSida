@@ -68,7 +68,7 @@
     }
 }
 
-.aboutText {
+.subText {
     font-size: 22px;
     background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
     background-repeat: repeat;
@@ -79,7 +79,7 @@
     font-weight: 800;
     -webkit-font-smoothing: antialiased;
     text-align: center;
-    
+
     @media (max-width: 460px) {
         font-size: 14px;
         text-align: center;
