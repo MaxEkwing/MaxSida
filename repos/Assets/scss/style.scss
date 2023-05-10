@@ -6,11 +6,46 @@
 @import "inc/content";
 @import "inc/blocks";*/
 
-.bod {
-    background-image: url(https://images.unsplash.com/photo-1529753253655-470be9a42781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGFyayUyMHN0b25lfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+.page {
+    background-color: whitesmoke;
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: contain;
+}
+.background {
+    position: relative;
+    width: 2400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    filter: invert(1);
+}
+
+.background:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://i.redd.it/hegc69x1zc671.gif);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.background-content {
+    position: relative;
+    z-index: 1;
+}
+
+.background-border {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 2px solid white;
 }
 
 .related {
@@ -32,6 +67,9 @@
     @media (max-width: 460px) {
         font-size: 20px;
     }
+}
+.container-related {
+    
 }
 
 .title {
@@ -69,7 +107,7 @@
 }
 
 .subText {
-    font-size: 22px;
+    font-size: 19px;
     background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -79,6 +117,9 @@
     font-weight: 800;
     -webkit-font-smoothing: antialiased;
     text-align: center;
+    word-wrap: break-word;
+    width: 500px;
+    
 
     @media (max-width: 460px) {
         font-size: 14px;
@@ -97,22 +138,20 @@ a {
     -webkit-font-smoothing: antialiased;
     transition: background-image 0.7s ease-in-out;
 }
-
 .menu-container {
     display: flex;
     justify-content: center;
-    
+    list-style-type: none;
 }
-
 .menu {
     font-size: 25px;
+    filter: invert(1);
 
     @media (max-width: 460px) {
         font-size: 18px;
     }
 }
-
 a:hover {
-    background-image: url(https://i.gifer.com/23WP.gif);
+    background-image: url(https://media4.giphy.com/media/3o85xJY1FaLzqeoBGw/giphy.gif);
 }
 

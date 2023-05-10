@@ -13,22 +13,50 @@
     <link rel="stylesheet" href="\css\style.css">
 
     </head>
-    <body class="bod">
-        <header> 
-            @if(Model.StartPage != null && Model.StartPage.Menu != null){
-        <ul class="menu-container">
-        @foreach(var item in Model.StartPage.Menu)
-        {
-            <li>
-                <a class="menu" href="@item.GetMappedHref()">
-                    @item.Text&nbsp&nbsp&nbsp&nbsp;
-                </a>
-            </li>
-        }
-        </ul>
-            }
-        </header>
-        @await Html.RenderEPiServerQuickNavigatorAsync()
-        @RenderBody()
+    <body class="body">  
+        
+    <div class="page">
+        <div class="title">
+            <header>
+                @if (Model.StartPage != null && Model.StartPage.Menu != null)
+                {
+                    <ul class="menu-container">
+                        @foreach (var item in Model.StartPage.Menu)
+                        {
+                            <li>
+                                <a class="menu" href="@item.GetMappedHref()">
+                                    @item.Text&nbsp&nbsp&nbsp&nbsp;
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </header>
+            @await Html.RenderEPiServerQuickNavigatorAsync()
+            @RenderBody()
+            @*<h2>@Html.PropertyFor(x => x.CurrentPage.Title)</h2>*@
+        </div>
+                <div class="background">
+            <div class="background-content">
+                <div class="epiText">
+                    @Html.PropertyFor(x => x.CurrentPage.MainBody)
+                </div>
+
+                <div class="subText">
+                    @Html.PropertyFor(x => x.CurrentPage.SubBody)
+                </div>
+
+                <div class="container-related">
+                    <h2 class="related"> Releated Content </h2>
+                    <div class="related-links">
+                        @Html.PropertyFor(m => m.CurrentPage.RelatedContentLinks)
+                    </div>
+                </div>
+            </div>
+            <div class="background-border"></div>
+                    
+                </div>
+        
+    </div>
     </body>
 </html>
