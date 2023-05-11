@@ -36,27 +36,28 @@
             @RenderBody()
             @*<h2>@Html.PropertyFor(x => x.CurrentPage.Title)</h2>*@
         </div>
-                <div class="background">
+        <div class="background">
+            <div class="background-border">
+                <video autoplay muted loop id="myVideo">
+                    <source src="\Images\bakground.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="background-content">
                 <div class="epiText">
                     @Html.PropertyFor(x => x.CurrentPage.MainBody)
                 </div>
-
                 <div class="subText">
                     @Html.PropertyFor(x => x.CurrentPage.SubBody)
                 </div>
 
-                <div class="container-related">
-                    <h2 class="related"> Releated Content </h2>
-                    <div class="related-links">
-                        @Html.PropertyFor(m => m.CurrentPage.RelatedContentLinks)
-                    </div>
-                </div>
             </div>
-            <div class="background-border"></div>
-                    
-                </div>
-        
+        </div>
+        <div class="container-related">
+            @*<h2 class="related"> Related Content </h2>*@
+            <div class="related-links">
+                @Html.PropertyFor(m => m.CurrentPage.RelatedContentLinks)
+            </div>
+        </div>
     </div>
     </body>
 </html>

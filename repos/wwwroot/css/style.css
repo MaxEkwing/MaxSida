@@ -6,7 +6,7 @@
 @import "inc/content";
 @import "inc/blocks";*/
 .page {
-  background-color: whitesmoke;
+  background-color: floralwhite;
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: contain;
@@ -14,48 +14,46 @@
 
 .background {
   position: relative;
-  width: 2400px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
-  filter: invert(1);
-}
-
-.background:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url(https://i.redd.it/hegc69x1zc671.gif);
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-size: contain;
 }
 
 .background-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .background-border {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  border: 2px solid white;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2400px;
+  height: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.background-border video#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .related {
+  filter: invert(1);
   background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
-  font-weight: 800;
+  font-family: Courier New, Courier, monospace;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 @media (max-width: 460px) {
@@ -64,10 +62,17 @@
   }
 }
 
+.related-links {
+  filter: invert(1);
+}
 @media (max-width: 460px) {
   .related-links {
     font-size: 20px;
   }
+}
+
+.container-related {
+  transform: translateX(3%);
 }
 
 .title {
@@ -91,14 +96,15 @@
 .epiText {
   font-size: 40px;
   text-align: center;
-  background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
+  background-color: white;
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
-  font-weight: 800;
+  font-family: Courier New, Courier, monospace;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
+  filter: invert(1);
 }
 @media (max-width: 460px) {
   .epiText {
@@ -107,18 +113,20 @@
 }
 
 .subText {
-  font-size: 19px;
-  background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
+  font-size: 22px;
+  background-color: white;
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
-  font-weight: 800;
+  font-family: Courier New, Courier, monospace;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-align: center;
+  transform: translateX(380%);
   word-wrap: break-word;
-  width: 500px;
+  width: 505px;
+  filter: invert(1);
 }
 @media (max-width: 460px) {
   .subText {
@@ -128,13 +136,15 @@
 }
 
 a {
-  background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
+  background-image: url(https://as2.ftcdn.net/v2/jpg/03/08/67/01/1000_F_308670172_sB4zhNMzTeWSa68rDT34N6CwXNV4viEd.jpg);
+  filter: invert(1);
   background-repeat: repeat;
+  font-size: 22px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
-  font-weight: 800;
+  font-family: Courier New, Courier, monospace;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   transition: background-image 0.7s ease-in-out;
 }
@@ -146,8 +156,9 @@ a {
 }
 
 .menu {
-  font-size: 25px;
-  filter: invert(1);
+  font-size: 30px;
+  filter: invert(0);
+  font-weight: bold;
 }
 @media (max-width: 460px) {
   .menu {
@@ -156,5 +167,5 @@ a {
 }
 
 a:hover {
-  background-image: url(https://media4.giphy.com/media/3o85xJY1FaLzqeoBGw/giphy.gif);
+  background-image: url(https://stargazerslounge.com/uploads/monthly_2016_06/575453e43c1c0_5thgif5.gif.f01919b845433ad27909a25fd0a41e30.gif);
 }
