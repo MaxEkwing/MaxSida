@@ -6,5 +6,9 @@
   {
     "inputFile": "Assets/scss/theme.scss",
     "outputFile": "wwwroot/css/theme.css"
+  },
+  {
+    "inputFile": "Assets/js/script.js",
+    "outputFile": "wwwroot/js/script.js"
   }
 ]

@@ -1,4 +1,5 @@
-﻿/*@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+﻿@charset "UTF-8";
+/*@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
 @import "inc/general";
 @import "inc/header";
@@ -68,14 +69,9 @@
 .title {
   font-size: 5vw;
   text-align: center;
-  background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
   font-weight: 800;
-  -webkit-font-smoothing: antialiased;
 }
 @media (max-width: 460px) {
   .title {
@@ -150,4 +146,58 @@ a {
 
 a:hover {
   background-image: url(https://images.squarespace-cdn.com/content/v1/57d17fe82e69cfb440435e2a/d764cbf3-4441-440e-b654-1f3a508df896/trim.574C9964-FC22-4BC6-9B42-92CC1109A8F4.gif);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #CECECE;
+  color: black;
+  font-size: 2vw;
+  text-transform: uppercase;
+  font-family: Courier New, Courier, monospace;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  padding: 15px;
+  width: 50%;
+  text-align: left;
+  border: thick;
+  outline: none;
+  transition: background-color 0.7s ease-in-out;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #B7B7B7;
+}
+
+.accordion:after {
+  content: "➕"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "➖"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  width: 47.8%;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.panel p {
+  color: black;
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-family: Courier New, Courier, monospace;
+  font-weight: 400;
 }

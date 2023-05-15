@@ -14,6 +14,7 @@ namespace repos.Models.Pages
     [ImageUrl("~/styles/images/page_type.png")]
     public class CasePage : SitePageData
     {
+        public virtual ContentArea Cases { get; set; }
 
     }
 }

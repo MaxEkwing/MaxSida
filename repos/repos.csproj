@@ -26,10 +26,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="Models\Blocks\" />
-  </ItemGroup>
-  
-  <ItemGroup>
     <None Include="wwwroot\Images\MaxProfil.jpg" />
   </ItemGroup>
 </Project>

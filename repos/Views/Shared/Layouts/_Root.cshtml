@@ -10,7 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     @*<title> @model.name</title>*@
-    <link rel="stylesheet" href="\css\style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
 
     </head>
     <body class="body">  
@@ -32,12 +33,11 @@
                     </ul>
                 }
             </header>
-            @await Html.RenderEPiServerQuickNavigatorAsync()
-            @RenderBody()
+            
             @*<h2>@Html.PropertyFor(x => x.CurrentPage.Title)</h2>*@
         </div>
         <video autoplay muted loop id="myVideo">
-            <source src="\Images\bakground.mp4" type="video/mp4">
+            <source src="/Images/bakground.mp4" type="video/mp4">
         </video>
         <div class="background">
             <div class="background-content">
@@ -47,6 +47,8 @@
                 <div class="subText">
                     @Html.PropertyFor(x => x.CurrentPage.SubBody)
                 </div>
+                @await Html.RenderEPiServerQuickNavigatorAsync()
+                @RenderBody()
 
             </div>
         </div>
