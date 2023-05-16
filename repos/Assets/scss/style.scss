@@ -137,7 +137,6 @@ a:hover {
 }
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-    
     background-color: #CECECE;
     color: black;
     font-size: 2vw;
@@ -151,7 +150,7 @@ a:hover {
     text-align: left;
     border: thick;
     outline: none;
-    transition: background-color 0.7s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -165,13 +164,13 @@ a:hover {
     color: #777;
     float: right;
     margin-left: 5px;
+    
 }
 
 .active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
-/* Style the accordion panel. Note: hidden by default */
 .panel {
     padding: 0 18px;
     width: 47.8%;
@@ -187,4 +186,9 @@ a:hover {
     text-transform: uppercase;
     font-family: Courier New, Courier, monospace;
     font-weight: 400;
+}
+.links_case {
+    font-size: 1vw;
+    filter: invert(0);
+    font-weight: 200;
 }

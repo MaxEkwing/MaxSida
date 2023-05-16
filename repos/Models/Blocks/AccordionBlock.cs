@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using EPiServer.SpecializedProperties;
+using System.ComponentModel.DataAnnotations;
 
 namespace repos.Models.Blocks
 {
@@ -17,6 +18,17 @@ namespace repos.Models.Blocks
     GroupName = SystemTabNames.Content,
     Order = 2)]
         [CultureSpecific]
-        public virtual string Description { get; set; }
+        public virtual XhtmlString Description { get; set; }
+       
+        [Display(
+    GroupName = SystemTabNames.Content,
+    Order = 3)]
+        [CultureSpecific]
+        public virtual XhtmlString Journal { get; set; }
+
+        [Display(
+            GroupName = SystemTabNames.Content,
+            Order = 4)]
+        public virtual LinkItemCollection Links { get; set; }
     }
 }
