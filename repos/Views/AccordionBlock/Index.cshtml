@@ -1,22 +1,22 @@
 ﻿@model repos.Models.Blocks.AccordionBlock
 
-<button class="accordion">@Model.Heading</button>
-<div class="panel">
-    <div class="panel-content">
-        @Html.PropertyFor(x => x.Description)
-        @Html.PropertyFor(x => x.Journal)
+    <button class="accordion">@Model.Heading</button>
+    <div class="panel">
+        <div class="panel-content">
+            @Html.PropertyFor(x => x.Description)
+            @Html.PropertyFor(x => x.Journal)
+        </div>
+        @if (Model.Links != null)
+        {
+            <ul>
+                @foreach (var item in Model.Links)
+                {
+                    <li style="list-style: none;">
+                        <a class="links_case" href="@item.GetMappedHref()">
+                            @item.Text&nbsp&nbsp&nbsp&nbsp;
+                        </a>
+                    </li>
+                }
+            </ul>
+        }
     </div>
-    @if (Model.Links != null)
-    {
-        <ul>
-            @foreach (var item in Model.Links)
-            {
-                <li style="list-style: none;">
-                    <a class="links_case" href="@item.GetMappedHref()">
-                        @item.Text&nbsp&nbsp&nbsp&nbsp;
-                    </a>
-                </li>
-            }
-        </ul>
-    }
-</div>
