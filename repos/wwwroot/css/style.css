@@ -70,12 +70,11 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
 }
 
@@ -138,6 +137,7 @@ a {
   font-weight: bolder;
   -webkit-font-smoothing: antialiased;
   transition: background-image 0.7s ease-in-out;
+  transition: font-size 0.7s ease-in-out;
 }
 
 .menu-container {
@@ -150,6 +150,7 @@ a {
   font-size: 1.5vw;
   filter: invert(0);
   font-weight: bold;
+  transition: font-size 0.7s ease-in-out;
 }
 @media (max-width: 460px) {
   .menu {
@@ -158,7 +159,12 @@ a {
 }
 
 a:hover {
+  font-size: 1.5vw;
   background-image: url(https://images.squarespace-cdn.com/content/v1/57d17fe82e69cfb440435e2a/d764cbf3-4441-440e-b654-1f3a508df896/trim.574C9964-FC22-4BC6-9B42-92CC1109A8F4.gif);
+}
+
+.menu:hover {
+  font-size: 2vw;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -197,7 +203,7 @@ a:hover {
 }
 
 .panel {
-  width: 700px;
+  width: 500px;
   background-color: white;
   display: none;
   overflow: hidden;
