@@ -14,34 +14,35 @@
     <script src="/js/script.js" defer></script>
 
     </head>
-<header>
-    @if (Model.StartPage != null && Model.StartPage.Menu != null)
-    {
-        <ul class="menu-container">
-            @foreach (var item in Model.StartPage.Menu)
-            {
-                <li>
-                    <a class="menu" href="@item.GetMappedHref()">
-                        @item.Text&nbsp&nbsp&nbsp&nbsp;
-                    </a>
-                </li>
-            }
-        </ul>
-    }
-</header>
     <body class="body">
-
-    <div class="page">
-        <div class="title">
-            <h2>@Html.PropertyFor(x => x.CurrentPage.Title)</h2>  
+        <div class="background">
+            <h2>@Html.PropertyFor(x => x.CurrentPage.Title)</h2>
+        <header>
+            @if (Model.StartPage != null && Model.StartPage.Menu != null)
+            {
+                <ul class="menu-container">
+                    @foreach (var item in Model.StartPage.Menu)
+                    {
+                        <li>
+                            <a class="menu" href="@item.GetMappedHref()">
+                                @item.Text&nbsp&nbsp&nbsp&nbsp;
+                            </a>
+                        </li>
+                    }
+                </ul>
+            }
+        </header>
             <video autoplay muted loop id="myVideo">
                 <source src="/Images/bakground.mp4" type="video/mp4">
             </video>
+        <div class="container-related">
+            <h2 class="related"> Related Content </h2>
+            <div class="related-links">
+                @Html.PropertyFor(m => m.CurrentPage.RelatedContentLinks)
+            </div>
         </div>
-        
-        <div class="background">
-
-            <div class="background-content">
+        </div>
+            <div class="content">
                 <div class="epiText">
                     @Html.PropertyFor(x => x.CurrentPage.MainBody)
                 </div>
@@ -50,17 +51,7 @@
                 </div>
                 @await Html.RenderEPiServerQuickNavigatorAsync()
                 @RenderBody()
-
             </div>
-        </div>
-        <div class="container-related">
-            <h2 class="related"> Related Content </h2>
-            <div class="related-links">
-                @Html.PropertyFor(m => m.CurrentPage.RelatedContentLinks)
-            </div>
-        </div>
-    </div>
-
+       
     </body>
-
 </html>

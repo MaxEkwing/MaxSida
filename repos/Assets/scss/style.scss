@@ -6,7 +6,7 @@
 @import "inc/content";
 @import "inc/blocks";*/
 
-.page {
+.body {
     background-color: transparent;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,26 +18,25 @@
     padding: 7vh;
     z-index: 1; /* Bring the content above the video background */
 }
-
-.page video#myVideo {
-    position: absolute;
+.background video#myVideo {
+    position: fixed;
     top: 50%; /* Position the top of the video at the vertical center */
     left: 50%; /* Position the left of the video at the horizontal center */
     transform: translate(-50%, -50%); /* Center the video using transform */
-    width: auto;
-    height: auto;
+    width: calc(100% - 250px);
+    height: calc(100% - 150px);
     object-fit: initial;
     outline: 1px solid black;
     border: 1px solid black;
     box-sizing: border-box;
     z-index: -1; /* Move the video background behind the content */
-    overflow: scroll;
-    margin-top: 25px;
 }
 
-.background-content {
+.content {
     position: relative;
     z-index: 2;
+    width: calc(100% - 150px);
+    height: calc(100% - 150px);
 }
 
 .related {
@@ -51,16 +50,22 @@
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     list-style-type: none;
+    transform: rotate(90deg) translateY(calc(-100% + 210px)) translateX(174px);
+    transform-origin: left top;
+    position: absolute;
+    top: 0;
 
     @media (max-width: 460px) {
         font-size: 32px;
     }
 }
-
 .related-links {
     filter: invert(1);
     list-style-type: none;
-
+    transform: translateY(calc(-100% + 1020px)) translateX(-280px);
+    transform-origin: left top;
+    position: absolute;
+    top: 0;
 
     @media (max-width: 460px) {
         font-size: 20px;
@@ -76,11 +81,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    transform: translate(7%, 10%); /* Center the video using transform */
+    transform: translate(7%, 10%); 
     align-items: flex-start;
 }
 
-.title {
+.background h2 {
     font-size: 2.5vw;
     text-align: center;
     text-transform: uppercase;
@@ -93,14 +98,13 @@
 }
 
 .epiText {
-    font-size: 2vw;
+    font-size: 1.8vw;
     text-align: center;
     word-wrap: break-word;
     color: black;
     text-transform: uppercase;
     font-family: Courier New, Courier, monospace;
     font-weight: 500;
-
 
     @media (max-width: 460px) {
         font-size: 20px;
@@ -177,8 +181,8 @@ header {
     }
 }
 
-.page .menu {
-    z-index: 2; /* Bring the menu above the video background */
+.background .menu {
+    z-index: 2; 
 }
 
 .menu:hover {
@@ -222,6 +226,7 @@ header {
 
 .panel {
     width: 500px;
+    height: 400px;
     background-color: white;
     display: none;
     max-height: 10px;
@@ -239,7 +244,7 @@ header {
 .panel-content {
     color: black;
     font-size: 0.95vw;
-    text-transform: uppercase;
+    text-transform: fullsize-kana;
     font-family: Courier New, Courier, monospace;
     font-weight: 400;
     text-align: center;
