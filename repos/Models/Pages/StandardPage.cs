@@ -15,14 +15,7 @@ namespace repos.Models.Pages
     [ImageUrl("~/styles/images/page_type.png")]
     public class StandardPage : SitePageData
     {
-        [CultureSpecific]
-        [Display(
-    Name = "Image",
-    Description = "Image for the page",
-    GroupName = SystemTabNames.Content,
-    Order = 3)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference Image { get; set; }
+
 
     }
 }

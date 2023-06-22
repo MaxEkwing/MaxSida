@@ -16,29 +16,41 @@
     overflow: hidden;
     height: auto;
     padding: 7vh;
-    z-index: 1; /* Bring the content above the video background */
+    z-index: 1; 
+}
+.background {
+    background-color:black transparent; 
 }
 .background video#myVideo {
     position: fixed;
-    top: 50%; /* Position the top of the video at the vertical center */
-    left: 50%; /* Position the left of the video at the horizontal center */
-    transform: translate(-50%, -50%); /* Center the video using transform */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: calc(100% - 250px);
     height: calc(100% - 150px);
     object-fit: initial;
     outline: 1px solid black;
     border: 1px solid black;
     box-sizing: border-box;
-    z-index: -1; /* Move the video background behind the content */
-}
+    z-index: -1;
+    filter: invert(1);
 
+    @media (max-width: 1536px) {
+        width: calc(100% - 150px);
+        height: calc(100% - 50px);
+    }
+}
 .content {
     position: relative;
     z-index: 2;
     width: calc(100% - 150px);
     height: calc(100% - 150px);
-}
 
+    @media (max-width: 1536px) {
+        width: calc(100% - 5px);
+        height: calc(100% - 1px);
+    }
+}
 .related {
     filter: invert(1);
     background-image: url(https://www.stoneambassador.com.au/wp-content/uploads/2022/09/Ottoman-grey-stone-ambassador.jpg);
@@ -46,32 +58,43 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    font-family: Courier New, Courier, monospace;
+    font-family: "Lucida Console", "Courier New", monospace;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     list-style-type: none;
-    transform: rotate(90deg) translateY(calc(-100% + 210px)) translateX(174px);
+    transform: rotate(90deg) translateY(calc(-100% + 210px)) translateX(125px);
     transform-origin: left top;
     position: absolute;
     top: 0;
 
-    @media (max-width: 460px) {
-        font-size: 32px;
+    @media (max-width: 1536px) {
+        transform: rotate(90deg) translateY(calc(100% + -75px)) translateX(-60px);
     }
 }
 .related-links {
     filter: invert(1);
     list-style-type: none;
-    transform: translateY(calc(-100% + 1020px)) translateX(-280px);
+    transform: translateY(calc(-100% + 921px)) translateX(-140px);
     transform-origin: left top;
     position: absolute;
     top: 0;
 
-    @media (max-width: 460px) {
-        font-size: 20px;
+    @media (max-width: 1536px) {
+        transform: translateY(calc(100% + 395px)) translateX(-70px);
     }
 }
+.related-links ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.related-links ul li {
+    margin-right: 25px; 
+    margin-bottom: 10px; 
+}
 .container-related {
     list-style-type: none;
     padding: 0;
@@ -91,19 +114,39 @@
     text-transform: uppercase;
     font-family: 'Steelfish Rg', 'helvetica neue', helvetica, arial, sans-serif;
     font-weight: 800;
+    filter: invert(1);
 
-    @media (max-width: 460px) {
-        font-size: 30px;
+    @media (max-width: 1536px) {
+        padding: 30px;
     }
+}
+.image-container {
+    position: absolute;
+    top: 120px;
+    right: 120px;
+    width: 130px;
+    height: auto;
+    z-index: 2;
+    filter: invert(1);
+    @media (max-width: 1536px) {
+        width: 170px;
+        top: 50px;
+        right: 69px;
+    }
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
 }
 
 .epiText {
     font-size: 1.8vw;
     text-align: center;
     word-wrap: break-word;
-    color: black;
+    color: white;
     text-transform: uppercase;
-    font-family: Courier New, Courier, monospace;
+    font-family: "Lucida Console", "Courier New", monospace;
     font-weight: 500;
 
     @media (max-width: 460px) {
@@ -115,16 +158,12 @@
     font-size: 1vw;
     color: white;
     text-transform: uppercase;
-    font-family: Courier New, Courier, monospace;
+    font-family: "Lucida Console", "Courier New", monospace;
     font-weight: 400;
     text-align: right;
-    word-wrap: break-word;
-    width: 15%;
-    filter: invert(1);
+    width: 20%;
     float: right;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%);
+    transform: translate(-30%, 10%);
 
     @media (max-width: 460px) {
         font-size: 14px;
@@ -136,15 +175,15 @@ a {
     background-image: url(https://as2.ftcdn.net/v2/jpg/03/08/67/01/1000_F_308670172_sB4zhNMzTeWSa68rDT34N6CwXNV4viEd.jpg);
     filter: invert(1);
     background-repeat: repeat;
-    font-size: 1.42vw;
+    font-size: 1.2vw;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    font-family: Courier New, Courier, monospace;
+    font-family: "Lucida Console", "Courier New", monospace;
     font-weight: bolder;
     -webkit-font-smoothing: antialiased;
     transition: background-image 0.7s ease-in-out;
-    transition: font-size 0.7s ease-in-out;
+    transition: font-size 0.2s ease-in-out;
 }
 
 a:hover {
@@ -157,9 +196,13 @@ header {
     justify-content: center;
     z-index: 100;
     display: flex;
-    top: 0;
+    top: 20px;
     left: 0;
     right: 0;
+
+    @media (max-width: 1536px) {
+        top: 0px;
+    }
 }
 
 .menu-container {
@@ -174,10 +217,10 @@ header {
     font-weight: bold;
     transition: font-size 0.3s ease-in-out;
     position: relative;
-    margin: 0 auto; /* Add this line to center the menu */
+    margin: 0 auto;
 
-    @media (max-width: 460px) {
-        font-size: 18px;
+    @media (max-width: 1536px) {
+        font-size: 1.8vw;
     }
 }
 
@@ -186,31 +229,36 @@ header {
 }
 
 .menu:hover {
-    font-size: 1.8vw;
+    font-size: 2vw;
 }
 
 .accordion {
-    background-color: #CECECE;
-    color: black;
+    background-color: transparent;
+    color: white;
     font-size: 1.3vw;
     text-transform: uppercase;
-    font-family: Courier New, Courier, monospace;
-    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 500;
     text-align: center;
     cursor: pointer;
     padding: 5px;
-    width: 500px;
-    transform: translate(35%, 10%); /* Center the video using transform */
+    width: 320px;
+    transform: translate(35%, 10%);
     text-align: left;
-    border: 1px groove;
+    border: 1px thin;
     box-sizing: border-box;
     outline: none;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+
+    @media (max-width: 1536px) {
+        transform: translate(15%, 10%);
+    }
 }
 
 
 .active, .accordion:hover {
-    background-color: #B7B7B7;
+    background-color: ghostwhite;
+    color: black;
 }
 
 .accordion:after {
@@ -225,19 +273,25 @@ header {
 }
 
 .panel {
+    position: absolute;
     width: 500px;
     height: 400px;
     background-color: white;
     display: none;
     max-height: 10px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    transform: translate(35%, 0);
+    overflow-y: auto;
+    transform: translate(35%, 0%);
     transition: max-height 0.5s ease-in-out;
     top: 100%;
+
+    @media (max-width: 1536px) {
+        transform: translate(74%, -57%);
+        height: 250px;
+    }
 }
 
 .panel.active {
-    max-height: 200px; /* Adjust the maximum height to fit the desired content */
+    max-height: 200px;
     transition: max-height 1s ease-in-out;
 }
 
@@ -245,7 +299,7 @@ header {
     color: black;
     font-size: 0.95vw;
     text-transform: fullsize-kana;
-    font-family: Courier New, Courier, monospace;
+    font-family: "Lucida Console", "Courier New", monospace;
     font-weight: 400;
     text-align: center;
     margin-left: 15px;

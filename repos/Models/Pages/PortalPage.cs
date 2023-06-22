@@ -2,6 +2,7 @@
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EPiServer.Web;
 using System.ComponentModel.DataAnnotations;
 
 namespace repos.Models.Pages
@@ -16,5 +17,6 @@ namespace repos.Models.Pages
     {
         [CultureSpecific]
         public virtual LinkItemCollection Menu { get; set; }
+
     }
 }

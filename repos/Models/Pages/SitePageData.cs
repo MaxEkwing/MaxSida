@@ -32,6 +32,14 @@ public abstract class SitePageData : PageData
            GroupName = SystemTabNames.Content,
            Order = 3)]
     public virtual XhtmlString SubBody { get; set; }
+    [CultureSpecific]
+    [Display(
+Name = "Image",
+Description = "Image for the page",
+GroupName = SystemTabNames.Content,
+Order = 4)]
+    [UIHint(UIHint.Image)]
+    public virtual ContentReference Image { get; set; }
 
     [CultureSpecific]
     public virtual LinkItemCollection RelatedContentLinks { get; set; }

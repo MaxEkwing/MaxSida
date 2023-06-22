@@ -18,6 +18,7 @@
         <div class="background">
             <h2>@Html.PropertyFor(x => x.CurrentPage.Title)</h2>
         <header>
+            
             @if (Model.StartPage != null && Model.StartPage.Menu != null)
             {
                 <ul class="menu-container">
@@ -32,14 +33,19 @@
                 </ul>
             }
         </header>
+        <div class="image-container">
+            <img src="\Images\LOGO.jpg" alt="Logo" class="image" />
+        </div>
             <video autoplay muted loop id="myVideo">
-                <source src="/Images/bakground.mp4" type="video/mp4">
+                <source src="/Images/background.mp4" type="video/mp4">
             </video>
+
         <div class="container-related">
             <h2 class="related"> Related Content </h2>
             <div class="related-links">
                 @Html.PropertyFor(m => m.CurrentPage.RelatedContentLinks)
             </div>
+
         </div>
         </div>
             <div class="content">
@@ -49,6 +55,7 @@
                 <div class="subText">
                     @Html.PropertyFor(x => x.CurrentPage.SubBody)
                 </div>
+        
                 @await Html.RenderEPiServerQuickNavigatorAsync()
                 @RenderBody()
             </div>
